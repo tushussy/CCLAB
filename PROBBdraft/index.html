@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suspirium</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+    <h1 class="jersey-15-charted-regular">Do We Actually Know What's Going On?</h1>
+
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="Thom Yorke - Suspirium.mp3" type="audio/mpeg">
+    </audio>
+    <button id="muteButton">Press to Mute</button>
+
+    <script>
+        var audio = document.getElementById("backgroundAudio");
+        var muteButton = document.getElementById("muteButton");
+
+        muteButton.addEventListener("click", function() {
+            if (audio.muted) {
+                audio.muted = false;
+                muteButton.innerHTML = "Press To Mute";
+            } else {
+                audio.muted = true;
+                muteButton.innerHTML = "Press to Unmute";
+            }
+        });
+    </script>
+
+    <div id="main-wrapper">
+        <div id="p5-canvas-container"></div>
+    </div>
+
+    <div class="text-box">
+        <p>"Suspirium" is a hauntingly beautiful song by Thom Yorke, best known as the lead singer of the band Radiohead. The song was featured in the soundtrack for the 2018 horror film "Suspiria," directed by Luca Guadagnino. “Suspirium" serves as a thematic centerpiece for the film, capturing its eerie and mysterious atmosphere. The lyrics are introspective and poetic, reflecting on themes of loss, longing, and transformation.
+
+            The song's title is derived from the Latin word "suspiria," meaning sighs or whispers. This word perfectly encapsulates the ethereal and haunting nature of the song. Yorke's lyrics speak of fleeting moments and the passage of time, capturing a sense of nostalgia and introspection.</p>
+    </div>
+
+    <img src="thome yokre.jpeg" alt="img">
+
+    <div id="text-placeholder">Suspirium by Thom Yorke is one of the songs that deeply affected my life. The spiral pattern shown above is the visual representation of my feelings during a “spiralling”. Every now and then, when I feel immense emotional discomfort, or when I feel my life has spiraled into a deep void, the dim lights in my room often blurred my vision as I felt drowning in my emotions. When this happens, I would always listen to “Suspirium” as it relieved my thoughts and brought me back from an emotional plane that is deep loneliness.</div>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>
